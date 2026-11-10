@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "issue-to-patch-agent"
+version = "0.1.0"
+description = "Issue-to-patch AI agent: draft a validated patch, human applies it."
+requires-python = ">=3.11"
+
+[tool.setuptools]
+packages = ["issue_to_patch_agent"]
+
+[tool.pytest.ini_options]
+# Only the project's own tests. The sample repo's tests are meant
+# to FAIL on the buggy code and PASS after a patch, so they must
+# not be collected by the main test run.
+testpaths = ["tests"]
