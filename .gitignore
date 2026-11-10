@@ -1,0 +1,8 @@
+__pycache__/
+.venv/
+.env
+*.json
+!eval/cases.json
+!eval/heldout_cases.json
+patch.diff
+report.md
